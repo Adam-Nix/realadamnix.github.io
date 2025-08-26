@@ -12,14 +12,37 @@
         </script>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Personal portfolio of Adam Nix">
-        <title>Contact - Adam Nix</title>
+    <meta name="description" content="Contact Adam Nix – Computer Networks & Systems Management student. Get in touch for placement or collaboration.">
+    <meta name="theme-color" content="#2563eb">
+    <link rel="canonical" href="https://adamnix.ie/contact.html">
+    <title>Contact | Adam Nix</title>
+    <link rel="icon" href="images/logo.png" type="image/png">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Adam Nix Portfolio">
+    <meta property="og:title" content="Contact | Adam Nix">
+    <meta property="og:description" content="Reach out to Adam Nix – networking & systems management student.">
+    <meta property="og:url" content="https://adamnix.ie/contact.html">
+    <meta property="og:image" content="https://adamnix.ie/images/logo.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Contact | Adam Nix">
+    <meta name="twitter:description" content="Reach out to Adam Nix – networking & systems management student.">
+    <meta name="twitter:image" content="https://adamnix.ie/images/logo.png">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
-        <link rel="stylesheet" href="styles.css">
+                <link rel="stylesheet" href="styles.css">
+                <script type="application/ld+json">
+                {
+                    "@context": "https://schema.org",
+                    "@type": "ContactPage",
+                    "name": "Contact | Adam Nix",
+                    "description": "Contact page for Adam Nix portfolio.",
+                    "url": "https://adamnix.ie/contact.html"
+                }
+                </script>
     </head>
 <body>
+        <a class="skip-link" href="#main-content">Skip to main content</a>
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark">
             <div class="container">
@@ -29,16 +52,17 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
                         <li class="nav-item"><a class="nav-link" href="index.html">About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+                        <li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="contact.html" aria-current="page">Contact</a></li>
                         <li class="nav-item ms-2">
-                            <button id="dark-mode-toggle" class="theme-toggle">
-                                <div class="toggle-icons">
-                                    <img src="images/sun.png" alt="Light Mode" class="sun-icon">
-                                    <img src="images/moon.png" alt="Dark Mode" class="moon-icon">
+                            <button id="dark-mode-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+                                <div class="toggle-icons" aria-hidden="true">
+                                    <img src="images/sun.png" alt="" class="sun-icon" loading="lazy" width="24" height="24">
+                                    <img src="images/moon.png" alt="" class="moon-icon" loading="lazy" width="24" height="24">
                                 </div>
-                                <div class="toggle-handle"></div>
+                                <div class="toggle-handle" aria-hidden="true"></div>
                             </button>
                         </li>
                     </ul>
@@ -47,7 +71,7 @@
         </nav>
     </header>
 
-    <main class="container py-5">
+    <main id="main-content" class="container py-5" tabindex="-1">
         <section class="hero-section text-center mb-5">
             <h1 class="display-4 fw-bold mb-4">Get in Touch</h1>
             <p class="lead mb-4">Let's Connect and Discuss Opportunities</p>
@@ -101,14 +125,14 @@
                     <i class="bi bi-chat-dots me-2"></i>
                     Send a Message
                 </h2>
-                <form id="contact-form" action="https://script.google.com/macros/s/AKfycbw0sBEswu-mIWwc73ObNTXUB5x4uBg7SidWAL30zkUN5jqZKVf89431syu2Q9SStOlWdQ/exec" method="POST" onsubmit="redirectToThankYou(event)">
+                <form id="contact-form" action="https://script.google.com/macros/s/AKfycbw0sBEswu-mIWwc73ObNTXUB5x4uBg7SidWAL30zkUN5jqZKVf89431syu2Q9SStOlWdQ/exec" method="POST" onsubmit="redirectToThankYou(event)" novalidate>
                     <div class="row g-4">
                         <div class="col-md-6">
                             <div class="mb-3">
                                 <label for="name" class="form-label">
                                     <i class="bi bi-person me-2"></i>Your Name
                                 </label>
-                                <input type="text" class="form-control" id="name" name="name" required>
+                                <input type="text" class="form-control" id="name" name="name" required aria-required="true" autocomplete="name">
                             </div>
                         </div>
                         <div class="col-md-6">
@@ -116,7 +140,7 @@
                                 <label for="email" class="form-label">
                                     <i class="bi bi-envelope me-2"></i>Your Email
                                 </label>
-                                <input type="email" class="form-control" id="email" name="email" required>
+                                <input type="email" class="form-control" id="email" name="email" required aria-required="true" autocomplete="email" inputmode="email">
                             </div>
                         </div>
                     </div>
@@ -124,7 +148,8 @@
                         <label for="message" class="form-label">
                             <i class="bi bi-chat-text me-2"></i>Your Message
                         </label>
-                        <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+                        <textarea class="form-control" id="message" name="message" rows="5" required aria-required="true" aria-describedby="message-help"></textarea>
+                        <div id="message-help" class="form-text">Provide context (e.g., opportunity, collaboration, question).</div>
                     </div>
                     <div class="text-center">
                         <button type="submit" class="btn btn-primary btn-lg">

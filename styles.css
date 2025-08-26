@@ -20,6 +20,32 @@ body {
     transition: all 0.3s ease;
 }
 
+/* Skip Link */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: var(--primary-color);
+    color: #fff;
+    padding: 8px 16px;
+    z-index: 2000;
+    border-radius: 0 0 6px 0;
+    text-decoration: none;
+    transition: top 0.2s;
+}
+.skip-link:focus { top: 0; }
+
+/* Focus Styles */
+:focus-visible {
+    outline: 3px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+/* Reduce motion respect */
+@media (prefers-reduced-motion: reduce) {
+    * { animation: none !important; transition: none !important; }
+}
+
 /* Typography */
 h1 {
     font-size: 3.5rem;
@@ -27,6 +53,7 @@ h1 {
     margin-bottom: 2rem;
     background: linear-gradient(120deg, var(--primary-color), var(--secondary-color));
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     letter-spacing: -0.02em;
 }
@@ -200,13 +227,54 @@ body.dark-mode .btn-outline-primary:hover {
 body.dark-mode h1 {
     background: linear-gradient(120deg, var(--primary-color), var(--secondary-color));
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 body.dark-mode .badge {
-    background-color: var(--primary-color) !important;
-    color: var(--bg-color);
+    /* Higher contrast, lighter background */
+    background-color: rgba(255,255,255,0.18) !important;
+    color: #ffffff !important;
+    border: 1px solid rgba(255,255,255,0.35);
+    font-weight: 500;
+    backdrop-filter: blur(2px);
 }
+
+body.dark-mode .badge.bg-primary-subtle { background-color: rgba(255,255,255,0.22) !important; border-color: rgba(255,255,255,0.45); }
+body.dark-mode .badge.bg-secondary-subtle { background-color: rgba(255,255,255,0.22) !important; border-color: rgba(255,255,255,0.45); }
+
+/* Resume skills section refinements */
+#skills .h6.text-uppercase { color: #1f2937; letter-spacing: .5px; }
+body.dark-mode #skills .h6.text-uppercase { color: #ffffff; }
+
+/* Unified skill/certification badge styling */
+.badge-skill { 
+    background: rgba(37,99,235,0.08) !important; 
+    color: #1e40af !important; 
+    border: 1px solid rgba(37,99,235,0.35) !important;
+    font-weight: 500;
+}
+body.dark-mode .badge-skill { 
+    background: rgba(96,165,250,0.15) !important; 
+    color: #60a5fa !important; 
+    border: 1px solid rgba(96,165,250,0.55) !important;
+}
+
+/* Keep resume page legacy selector for safety */
+#skills .badge { 
+    background: rgba(37,99,235,0.08) !important; 
+    color: #1e40af !important; 
+    border: 1px solid rgba(37,99,235,0.35);
+}
+body.dark-mode #skills .badge { 
+    background: rgba(96,165,250,0.15) !important; 
+    color: #60a5fa !important; 
+    border: 1px solid rgba(96,165,250,0.55);
+}
+
+/* Stronger contrast for skill group headings */
+#skills .skill-group-heading { color: #1f2937; letter-spacing: .5px; }
+body.dark-mode #skills .skill-group-heading { color: #ffffff; text-shadow: 0 0 4px rgba(0,0,0,0.4); }
 
 body.dark-mode a {
     color: var(--primary-color);
@@ -377,3 +445,9 @@ body.dark-mode .theme-toggle .toggle-handle {
 .back-to-top.show {
     display: flex;
 }
+
+/* Utility: ensure images don't exceed container */
+img { max-width: 100%; height: auto; }
+
+/* Dark mode focus contrast */
+body.dark-mode :focus-visible { outline-color: var(--secondary-color); }

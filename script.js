@@ -81,6 +81,23 @@ document.addEventListener('DOMContentLoaded', () => {
 function redirectToThankYou(event) {
     event.preventDefault(); // Prevent the default form submission behavior
     const form = event.target;
+    let status = document.getElementById('form-status');
+    if (!status) {
+        status = document.createElement('div');
+        status.id = 'form-status';
+        status.setAttribute('role', 'status');
+        status.setAttribute('aria-live', 'polite');
+        status.style.marginTop = '1rem';
+        form.appendChild(status);
+    }
+
+    // Basic front-end validation guard (in case novalidate used)
+    if (!form.checkValidity()) {
+        status.textContent = 'Please fill in all required fields correctly.';
+        return;
+    }
+
+    status.textContent = 'Sending...';
 
     // Submit the form data to the Google Apps Script endpoint
     fetch(form.action, {
@@ -92,8 +109,11 @@ function redirectToThankYou(event) {
             // Redirect to the Thank You page after successful submission
             window.location.href = "thankyou.html";
         } else {
-            alert("Failed to send the message. Please try again later.");
+            status.textContent = 'Failed to send the message. Please try again later.';
         }
     })
-    .catch(error => console.error("Error:", error));
+    .catch(error => {
+        console.error("Error:", error);
+        status.textContent = 'An unexpected error occurred.';
+    });
 }

@@ -11,14 +11,43 @@
         </script>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Personal portfolio of Adam Nix">
-        <title>Adam Nix</title>
+    <meta name="description" content="Portfolio of Adam Nix – Computer Networks & Systems Management student with Cisco, networking, cloud and automation skills.">
+    <meta name="theme-color" content="#2563eb">
+    <link rel="canonical" href="https://adamnix.ie/">
+    <title>Adam Nix | Computer Networks & Systems Management</title>
+    <link rel="icon" href="images/logo.png" type="image/png">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Adam Nix Portfolio">
+    <meta property="og:title" content="Adam Nix | Computer Networks & Systems Management">
+    <meta property="og:description" content="Networking & systems management student: Cisco devices, VLANs, DNS, DHCP, Wireshark, Nmap, cloud (AWS) & automation.">
+    <meta property="og:url" content="https://adamnix.ie/">
+    <meta property="og:image" content="https://adamnix.ie/images/logo.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Adam Nix | Computer Networks & Systems Management">
+    <meta name="twitter:description" content="Networking & systems management student with Cisco, cloud & automation focus.">
+    <meta name="twitter:image" content="https://adamnix.ie/images/logo.png">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
-        <link rel="stylesheet" href="styles.css">
+                <link rel="stylesheet" href="styles.css">
+                <script type="application/ld+json">
+                {
+                    "@context": "https://schema.org",
+                    "@type": "Person",
+                    "name": "Adam Nix",
+                    "url": "https://adamnix.ie/",
+                    "description": "Computer Networks & Systems Management student experienced with Cisco networking, Wireshark, Nmap, cloud (AWS) and automation.",
+                    "sameAs": [
+                        "https://github.com/realadamnix",
+                        "https://www.linkedin.com/in/realadamnix/"
+                    ],
+                    "knowsAbout": ["Computer Networking", "Cisco", "VLANs", "DNS", "DHCP", "Wireshark", "Nmap", "AWS", "Network Automation"],
+                    "image": "https://adamnix.ie/images/logo.png"
+                }
+                </script>
     </head>
 <body>
+        <a class="skip-link" href="#main-content">Skip to main content</a>
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark">
             <div class="container">
@@ -28,16 +57,17 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link active" href="index.html" aria-current="page">About</a></li>
                         <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
-                        <li class="nav-item"><a class="nav-link active" href="#" aria-current="page">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li>
                         <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                         <li class="nav-item ms-2">
-                            <button id="dark-mode-toggle" class="theme-toggle">
-                                <div class="toggle-icons">
-                                    <img src="images/sun.png" alt="Light Mode" class="sun-icon">
-                                    <img src="images/moon.png" alt="Dark Mode" class="moon-icon">
+                            <button id="dark-mode-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+                                <div class="toggle-icons" aria-hidden="true">
+                                    <img src="images/sun.png" alt="" class="sun-icon" loading="lazy" width="24" height="24">
+                                    <img src="images/moon.png" alt="" class="moon-icon" loading="lazy" width="24" height="24">
                                 </div>
-                                <div class="toggle-handle"></div>
+                                <div class="toggle-handle" aria-hidden="true"></div>
                             </button>
                         </li>
                     </ul>
@@ -46,7 +76,7 @@
         </nav>
     </header>
 
-    <main class="container py-5">
+    <main id="main-content" class="container py-5" tabindex="-1">
         <section class="hero-section text-center mb-4">
             <h1 class="display-4 fw-bold mb-3">Adam Nix</h1>
             <p class="lead mb-3">Computer Networks and Systems Management Student</p>
@@ -108,15 +138,15 @@
                         </h2>
                         <div class="d-flex flex-wrap gap-2">
                             <a href="https://www.credly.com/badges/38a00d76-86ac-45c9-a2d4-27a5a87f8901/public_url" target="_blank" rel="noopener noreferrer" class="text-decoration-none">
-                                <span class="badge bg-success">CCNA: Enterprise Networking, Security, and Automation</span>
+                                <span class="badge badge-skill">CCNA: Enterprise Networking, Security, and Automation</span>
                             </a>
                             <a href="https://www.credly.com/badges/3cf65f63-0029-4048-a712-959a88ba4cd6/public_url" target="_blank" rel="noopener noreferrer" class="text-decoration-none">
-                                <span class="badge bg-success">CCNA: Switching, Routing, and Wireless Essentials</span>
+                                <span class="badge badge-skill">CCNA: Switching, Routing, and Wireless Essentials</span>
                             </a>
                             <a href="https://www.credly.com/badges/da6441b4-22f7-49ee-9016-0104985acf0e" target="_blank" rel="noopener noreferrer" class="text-decoration-none">
-                                <span class="badge bg-success">Microsoft Office Specialist: Associate</span>
+                                <span class="badge badge-skill">Microsoft Office Specialist: Associate</span>
                             </a>
-                            <span class="badge bg-success">Driver's licence (category B)</span>
+                            <span class="badge badge-skill">Driver's licence (category B)</span>
                         </div>
                     </div>
                 </div>
@@ -134,32 +164,32 @@
                         <div class="skill-section mb-3">
                             <h3 class="h6 mb-2">Networking</h3>
                             <div class="d-flex flex-wrap gap-2">
-                                <span class="badge bg-primary">Network Topologies</span>
-                                <span class="badge bg-primary">IP Sub-netting</span>
-                                <span class="badge bg-primary">VLANs</span>
-                                <span class="badge bg-primary">DNS</span>
-                                <span class="badge bg-primary">DHCP</span>
-                                <span class="badge bg-primary">Wireshark</span>
-                                <span class="badge bg-primary">Nmap</span>
+                                <span class="badge badge-skill">Network Topologies</span>
+                                <span class="badge badge-skill">IP Sub-netting</span>
+                                <span class="badge badge-skill">VLANs</span>
+                                <span class="badge badge-skill">DNS</span>
+                                <span class="badge badge-skill">DHCP</span>
+                                <span class="badge badge-skill">Wireshark</span>
+                                <span class="badge badge-skill">Nmap</span>
                             </div>
                         </div>
                         
                         <div class="skill-section mb-3">
                             <h3 class="h6 mb-2">Cloud & Systems</h3>
                             <div class="d-flex flex-wrap gap-2">
-                                <span class="badge bg-primary">AWS</span>
-                                <span class="badge bg-primary">Proxmox</span>
-                                <span class="badge bg-primary">Windows</span>
-                                <span class="badge bg-primary">Linux (Ubuntu, Kali)</span>
+                                <span class="badge badge-skill">AWS</span>
+                                <span class="badge badge-skill">Proxmox</span>
+                                <span class="badge badge-skill">Windows</span>
+                                <span class="badge badge-skill">Linux (Ubuntu, Kali)</span>
                             </div>
                         </div>
                         
                         <div class="skill-section">
                             <h3 class="h6 mb-2">Network Automation</h3>
                             <div class="d-flex flex-wrap gap-2">
-                                <span class="badge bg-primary">Network Scripts</span>
-                                <span class="badge bg-primary">Monitoring Tools</span>
-                                <span class="badge bg-primary">Configuration Management</span>
+                                <span class="badge badge-skill">Network Scripts</span>
+                                <span class="badge badge-skill">Monitoring Tools</span>
+                                <span class="badge badge-skill">Configuration Management</span>
                             </div>
                         </div>
                     </div>

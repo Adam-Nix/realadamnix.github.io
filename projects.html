@@ -12,14 +12,45 @@
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Personal portfolio of Adam Nix">
-    <title>Projects - Adam Nix</title>
+    <meta name="description" content="Projects by Adam Nix – learning C++, computer organization, circuit minimization, sequential circuits and more.">
+    <meta name="theme-color" content="#2563eb">
+    <link rel="canonical" href="https://adamnix.ie/projects.html">
+    <title>Projects | Adam Nix</title>
+    <link rel="icon" href="images/logo.png" type="image/png">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Adam Nix Portfolio">
+    <meta property="og:title" content="Projects | Adam Nix">
+    <meta property="og:description" content="Learning and practice projects: C++, computer organization, digital circuits and more.">
+    <meta property="og:url" content="https://adamnix.ie/projects.html">
+    <meta property="og:image" content="https://adamnix.ie/images/logo.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Projects | Adam Nix">
+    <meta name="twitter:description" content="Learning and practice projects: C++, computer organization, digital circuits and more.">
+    <meta name="twitter:image" content="https://adamnix.ie/images/logo.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="styles.css">
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "CollectionPage",
+            "name": "Projects | Adam Nix",
+            "url": "https://adamnix.ie/projects.html",
+            "description": "Learning and practice projects in C++, computer organization and digital circuits.",
+            "isPartOf": {"@type": "WebSite", "url": "https://adamnix.ie/"},
+            "about": [
+                {"@type": "SoftwareSourceCode", "name": "C++ Programming", "programmingLanguage": "C++", "url": "https://github.com/realadamnix/learn-cplusplus"},
+                {"@type": "SoftwareSourceCode", "name": "Computer Organization", "url": "https://github.com/realadamnix/learn-computer-organization"},
+                {"@type": "SoftwareSourceCode", "name": "Circuit Minimization", "url": "https://github.com/realadamnix/learnCircuitMinimisation"},
+        {"@type": "SoftwareSourceCode", "name": "Sequential Circuits", "url": "https://github.com/realadamnix/learnSequentialCircuits"},
+    {"@type": "Project", "name": "Home Lab & Media Infrastructure", "description": "Self-hosted TrueNAS storage, Jellyfin media server, Twingate zero-trust VPN, AdGuard DNS-based ad blocking and custom router setup for remote secure access.", "keywords": ["TrueNAS","Jellyfin","Twingate","AdGuard","Home Lab","Router","VPN","DNS"]}
+            ]
+        }
+        </script>
 </head>
 <body>
+        <a class="skip-link" href="#main-content">Skip to main content</a>
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark">
             <div class="container">
@@ -29,16 +60,17 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link active" href="#" aria-current="page">Projects</a></li>
                         <li class="nav-item"><a class="nav-link" href="index.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="projects.html" aria-current="page">Projects</a></li>
+                        <li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li>
                         <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                         <li class="nav-item ms-2">
-                            <button id="dark-mode-toggle" class="theme-toggle">
-                                <div class="toggle-icons">
-                                    <img src="images/sun.png" alt="Light Mode" class="sun-icon">
-                                    <img src="images/moon.png" alt="Dark Mode" class="moon-icon">
+                            <button id="dark-mode-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+                                <div class="toggle-icons" aria-hidden="true">
+                                    <img src="images/sun.png" alt="" class="sun-icon" loading="lazy" width="24" height="24">
+                                    <img src="images/moon.png" alt="" class="moon-icon" loading="lazy" width="24" height="24">
                                 </div>
-                                <div class="toggle-handle"></div>
+                                <div class="toggle-handle" aria-hidden="true"></div>
                             </button>
                         </li>
                     </ul>
@@ -47,7 +79,7 @@
         </nav>
     </header>
 
-    <main class="container py-5">
+    <main id="main-content" class="container py-5" tabindex="-1">
         <section class="hero-section text-center mb-5">
             <h1 class="display-4 fw-bold mb-4">Learning Projects</h1>
             <p class="lead mb-4">Exploring Computer Science & Engineering Concepts</p>
@@ -62,6 +94,7 @@
         </section>
 
         <div class="row g-4">
+            <!-- Programming & Systems Card -->
             <div class="col-lg-6">
                 <div class="card h-100">
                     <div class="card-body">
@@ -74,18 +107,17 @@
                                 <i class="bi bi-file-earmark-code me-3 h3 mb-0"></i>
                                 <h3 class="h5 mb-0">C++ Programming</h3>
                             </div>
-                            <p>Learning C++ programming fundamentals and advanced concepts</p>
+                            <p class="mb-2">Learning C++ programming fundamentals and core concepts.</p>
                             <a href="https://github.com/realadamnix/learn-cplusplus" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary">
                                 <i class="bi bi-github me-2"></i>View Project
                             </a>
                         </div>
-
-                        <div class="project-card mb-4">
+                        <div class="project-card">
                             <div class="d-flex align-items-center mb-3">
                                 <i class="bi bi-pc-display me-3 h3 mb-0"></i>
                                 <h3 class="h5 mb-0">Computer Organization</h3>
                             </div>
-                            <p>Computer architecture and organization concepts</p>
+                            <p class="mb-2">Foundational computer architecture & organization topics.</p>
                             <a href="https://github.com/realadamnix/learn-computer-organization" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary">
                                 <i class="bi bi-github me-2"></i>View Project
                             </a>
@@ -94,6 +126,7 @@
                 </div>
             </div>
 
+            <!-- Digital Circuits Card -->
             <div class="col-lg-6">
                 <div class="card h-100">
                     <div class="card-body">
@@ -106,21 +139,98 @@
                                 <i class="bi bi-diagram-3 me-3 h3 mb-0"></i>
                                 <h3 class="h5 mb-0">Circuit Minimization</h3>
                             </div>
-                            <p>Digital circuit optimization and minimization techniques</p>
+                            <p class="mb-2">Exploring logic reduction & simplification techniques.</p>
                             <a href="https://github.com/realadamnix/learnCircuitMinimisation" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary">
                                 <i class="bi bi-github me-2"></i>View Project
                             </a>
                         </div>
-
                         <div class="project-card">
                             <div class="d-flex align-items-center mb-3">
                                 <i class="bi bi-cpu me-3 h3 mb-0"></i>
                                 <h3 class="h5 mb-0">Sequential Circuits</h3>
                             </div>
-                            <p>Design and analysis of sequential digital circuits</p>
+                            <p class="mb-2">Design and analysis of state-driven digital systems.</p>
                             <a href="https://github.com/realadamnix/learnSequentialCircuits" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary">
                                 <i class="bi bi-github me-2"></i>View Project
                             </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Home Lab Card -->
+        <div class="card mt-5">
+            <div class="card-body">
+                <h2 class="card-title mb-4">
+                    <i class="bi bi-hdd-network me-2"></i>
+                    Home Lab & Services
+                </h2>
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <div class="project-card mb-4">
+                            <div class="d-flex align-items-center mb-2">
+                                <i class="bi bi-hdd-stack me-2 h5 mb-0"></i>
+                                <h3 class="h6 mb-0">TrueNAS Storage</h3>
+                            </div>
+                            <ul class="small mb-0 ps-3">
+                                <li>Central NAS for learning about storage & data organization.</li>
+                                <li>Hosts media and lab files for other services.</li>
+                            </ul>
+                        </div>
+                        <div class="project-card mb-4">
+                            <div class="d-flex align-items-center mb-2">
+                                <i class="bi bi-play-btn me-2 h5 mb-0"></i>
+                                <h3 class="h6 mb-0">Jellyfin Media Server</h3>
+                            </div>
+                            <ul class="small mb-0 ps-3">
+                                <li>Self-hosted media streaming pointing at NAS storage.</li>
+                                <li>Transcoding + library management practice.</li>
+                            </ul>
+                        </div>
+                        <div class="project-card mb-0">
+                            <div class="d-flex align-items-center mb-2">
+                                <i class="bi bi-diagram-3 me-2 h5 mb-0"></i>
+                                <h3 class="h6 mb-0">Router & DHCP</h3>
+                            </div>
+                            <ul class="small mb-0 ps-3">
+                                <li>Configured DHCP with static reservations for key hosts.</li>
+                                <li>Foundation for future VLAN segmentation studies.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="project-card mb-4">
+                            <div class="d-flex align-items-center mb-2">
+                                <i class="bi bi-shield-lock me-2 h5 mb-0"></i>
+                                <h3 class="h6 mb-0">Twingate Secure Access</h3>
+                            </div>
+                            <ul class="small mb-0 ps-3">
+                                <li>Remote private access without opening inbound ports.</li>
+                                <li>Resource-based access vs broad network exposure.</li>
+                            </ul>
+                        </div>
+                        <div class="project-card mb-4">
+                            <div class="d-flex align-items-center mb-2">
+                                <i class="bi bi-shield-check me-2 h5 mb-0"></i>
+                                <h3 class="h6 mb-0">AdGuard Local DNS</h3>
+                            </div>
+                            <ul class="small mb-0 ps-3">
+                                <li>DNS-based ad & tracker filtering for local devices.</li>
+                                <li>Upstream DoH resolvers (e.g., Quad9 / Cloudflare).</li>
+                            </ul>
+                        </div>
+                        <div class="project-card mb-0">
+                            <div class="d-flex align-items-center mb-2">
+                                <i class="bi bi-wifi me-2 h5 mb-0"></i>
+                                <h3 class="h6 mb-0">TP-Link Router Setup</h3>
+                            </div>
+                            <ul class="small mb-0 ps-3">
+                                <li>Changed default admin password & updated firmware.</li>
+                                <li>Configured secure Wi‑Fi (WPA2/WPA3) & disabled WPS.</li>
+                                <li>Set local DNS to AdGuard for unified filtering.</li>
+                                <li>Defined DHCP scope & key static reservations.</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -131,28 +241,32 @@
             <div class="card-body">
                 <h2 class="card-title mb-4">
                     <i class="bi bi-trophy me-2"></i>
-                    Technical Skills
+                    Summary of Focus Areas
                 </h2>
-                <div class="row g-4">
-                    <div class="col-md-6">
-                        <div class="skill-card">
-                            <h3 class="h5">Programming</h3>
-                            <ul class="list-unstyled">
-                                <li class="mb-2"><i class="bi bi-check2 me-2"></i>C++ Programming</li>
-                                <li class="mb-2"><i class="bi bi-check2 me-2"></i>Computer Architecture</li>
-                                <li class="mb-2"><i class="bi bi-check2 me-2"></i>System Design</li>
-                            </ul>
-                        </div>
+                <div class="row g-4 small">
+                    <div class="col-md-4">
+                        <h3 class="h6 text-uppercase">Programming</h3>
+                        <ul class="list-unstyled mb-0">
+                            <li><i class="bi bi-check2 me-1"></i>C++ Fundamentals</li>
+                            <li><i class="bi bi-check2 me-1"></i>Computer Architecture</li>
+                            <li><i class="bi bi-check2 me-1"></i>Systems Concepts</li>
+                        </ul>
                     </div>
-                    <div class="col-md-6">
-                        <div class="skill-card">
-                            <h3 class="h5">Digital Design</h3>
-                            <ul class="list-unstyled">
-                                <li class="mb-2"><i class="bi bi-check2 me-2"></i>Circuit Design</li>
-                                <li class="mb-2"><i class="bi bi-check2 me-2"></i>Logic Optimization</li>
-                                <li class="mb-2"><i class="bi bi-check2 me-2"></i>Sequential Systems</li>
-                            </ul>
-                        </div>
+                    <div class="col-md-4">
+                        <h3 class="h6 text-uppercase">Digital Logic</h3>
+                        <ul class="list-unstyled mb-0">
+                            <li><i class="bi bi-check2 me-1"></i>Circuit Design</li>
+                            <li><i class="bi bi-check2 me-1"></i>Logic Minimization</li>
+                            <li><i class="bi bi-check2 me-1"></i>Sequential Systems</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <h3 class="h6 text-uppercase">Home Lab</h3>
+                        <ul class="list-unstyled mb-0">
+                            <li><i class="bi bi-check2 me-1"></i>TrueNAS + Jellyfin</li>
+                            <li><i class="bi bi-check2 me-1"></i>Twingate Remote Access</li>
+                            <li><i class="bi bi-check2 me-1"></i>AdGuard DNS</li>
+                        </ul>
                     </div>
                 </div>
             </div>
