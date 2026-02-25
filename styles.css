@@ -61,6 +61,21 @@ body {
 }
 .skip-link:focus { top: 0; }
 
+/* Profile Image in Card */
+.profile-pic-card {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid var(--primary-color);
+    transition: all 0.3s ease;
+}
+
+.profile-pic-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15) !important;
+}
+
 /* Focus Styles */
 :focus-visible {
     outline: 3px solid var(--primary-color);
@@ -486,11 +501,13 @@ body.dark-mode .theme-toggle .toggle-handle {
 }
 
 .timeline-item h3 {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.25rem;
+    font-weight: 600;
 }
 
 .timeline-item p.text-muted {
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
 }
 
 /* Performance optimizations */
