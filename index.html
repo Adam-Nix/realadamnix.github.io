@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <!-- Google tag                                <img src="images/sun.png" alt="" class="sun-icon" loading="lazy" width="20" height="20">
-                                <img src="images/moon.png" alt="" class="moon-icon" loading="lazy" width="20" height="20">gtag.js) -->
+        <!-- Google tag (gtag.js) -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-VP8DWQGZ2M"></script>
         <script>
             window.dataLayer = window.dataLayer || [];
@@ -83,9 +82,13 @@
 
     <main id="main-content" class="container py-5" tabindex="-1">
         <section class="hero-section text-center mb-4" aria-labelledby="hero-heading">
+            <div class="status-chip" aria-label="Currently working at Dell Technologies">
+                <span class="status-dot" aria-hidden="true"></span>
+                Currently: IT Intern @ Dell Technologies
+            </div>
             <h1 id="hero-heading" class="display-4 fw-bold mb-3">Adam Nix</h1>
             <p class="lead mb-3">Computer Networks and Systems Management Student</p>
-            <div class="d-flex justify-content-center gap-3 mb-4">
+            <div class="hero-buttons d-flex justify-content-center gap-3 mb-4">
                 <a href="contact.html" class="btn btn-primary" aria-describedby="contact-desc">
                     <i class="bi bi-envelope me-2" aria-hidden="true"></i>Get in Touch
                 </a>
@@ -95,9 +98,12 @@
                 </a>
                 <span id="github-desc" class="visually-hidden">Opens GitHub repositories in new tab</span>
             </div>
+            <a href="#profile-section" class="hero-scroll-indicator" aria-hidden="true" tabindex="-1">
+                <i class="bi bi-chevron-down"></i>
+            </a>
         </section>
 
-        <div class="row g-4 mb-4">
+        <div id="profile-section" class="row g-4 mb-4">
             <div class="col-lg-8">
                 <article class="card h-100">
                     <div class="card-body">
@@ -107,10 +113,10 @@
                                     <i class="bi bi-person-badge me-2" aria-hidden="true"></i>
                                     Profile
                                 </h2>
-                                <p class="card-text">3rd year Computer Networking student at TUS with a passion for configuring and troubleshooting networks. Currently gaining industry experience as an IT Intern at Dell Technologies. Hands-on experience with Cisco routers and switches, VLANs, DNS, DHCP, and network security. Experience using Wireshark, Packet Tracer, and Nmap for network diagnostics. Continually expanding skills in cloud networking (AWS) and network automation.</p>
+                                <p class="card-text">3rd year Computer Networking student at TUS with a passion for configuring and troubleshooting networks. Currently gaining industry experience as an IT Intern at Dell Technologies. Hands-on experience with Cisco routers and switches, VLANs, DNS, DHCP, and network security. Experience using Wireshark, Packet Tracer, and Nmap for network diagnostics. Continually expanding skills in cloud networking (AWS) and network automation. An avid AI enthusiast who integrates tools like Claude and ChatGPT into everyday workflows — from writing automation scripts to troubleshooting, studying, and productivity.</p>
                             </div>
                             <div class="col-md-4 text-center mt-3 mt-md-0">
-                                <img src="images/profile.jpg" alt="Adam Nix Profile Picture" class="img-fluid rounded-circle profile-pic-card shadow-sm" width="220" height="220" loading="lazy">
+                                <img src="images/profile.jpg" alt="Adam Nix" class="img-fluid rounded-circle profile-pic-card shadow-sm" width="220" loading="lazy">
                             </div>
                         </div>
                     </div>
@@ -150,18 +156,45 @@
                             <i class="bi bi-award me-2"></i>
                             Certifications
                         </h2>
+                        <div class="d-flex flex-wrap align-items-center gap-3 mb-3">
+                            <a href="https://www.credly.com/badges/38a00d76-86ac-45c9-a2d4-27a5a87f8901/public_url" target="_blank" rel="noopener noreferrer" class="cert-badge-link" aria-label="CCNA: Enterprise Networking, Security, and Automation – view on Credly">
+                                <img src="https://images.credly.com/size/110x110/images/0a6d331e-8abf-4272-a949-33f754569a76/CCNAENSA__1_.png" alt="CCNA: Enterprise Networking, Security, and Automation badge" width="100" height="100" loading="lazy">
+                            </a>
+                            <a href="https://www.credly.com/badges/3cf65f63-0029-4048-a712-959a88ba4cd6/public_url" target="_blank" rel="noopener noreferrer" class="cert-badge-link" aria-label="CCNA: Switching, Routing, and Wireless Essentials – view on Credly">
+                                <img src="https://github.com/realadamnix/realadamnix/assets/150264616/39edfd59-3c1e-4612-a029-7f732342674e" alt="CCNA: Switching, Routing, and Wireless Essentials badge" width="100" height="100" loading="lazy">
+                            </a>
+                            <a href="https://www.credly.com/badges/11c43589-e659-41ac-b10f-68e42cb81d8d" target="_blank" rel="noopener noreferrer" class="cert-badge-link" aria-label="CCNA: Introduction to Networks – view on Credly">
+                                <img src="https://github.com/user-attachments/assets/d19d6300-c0af-44de-81d7-338af1c90234" alt="CCNA: Introduction to Networks badge" width="100" height="100" loading="lazy">
+                            </a>
+                        </div>
                         <div class="d-flex flex-wrap gap-2">
-                            <a href="https://www.credly.com/badges/38a00d76-86ac-45c9-a2d4-27a5a87f8901/public_url" target="_blank" rel="noopener noreferrer" class="text-decoration-none">
-                                <span class="badge badge-skill">CCNA: Enterprise Networking, Security, and Automation</span>
-                            </a>
-                            <a href="https://www.credly.com/badges/3cf65f63-0029-4048-a712-959a88ba4cd6/public_url" target="_blank" rel="noopener noreferrer" class="text-decoration-none">
-                                <span class="badge badge-skill">CCNA: Switching, Routing, and Wireless Essentials</span>
-                            </a>
                             <a href="https://www.credly.com/badges/da6441b4-22f7-49ee-9016-0104985acf0e" target="_blank" rel="noopener noreferrer" class="text-decoration-none">
                                 <span class="badge badge-skill">Microsoft Office Specialist: Associate</span>
                             </a>
-                            <span class="badge badge-skill">Driver's licence (category B)</span>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card mb-4">
+            <div class="card-body">
+                <div class="row g-4 text-center">
+                    <div class="col-6 col-md-3 stat-item">
+                        <div class="stat-number" data-target="3">0</div>
+                        <div class="stat-label">Certifications</div>
+                    </div>
+                    <div class="col-6 col-md-3 stat-item">
+                        <div class="stat-number" data-target="5">0</div>
+                        <div class="stat-label">Home Lab Services</div>
+                    </div>
+                    <div class="col-6 col-md-3 stat-item">
+                        <div class="stat-number" data-target="3" data-suffix="+">0</div>
+                        <div class="stat-label">Years Studying IT</div>
+                    </div>
+                    <div class="col-6 col-md-3 stat-item">
+                        <div class="stat-number" data-target="1">0</div>
+                        <div class="stat-label">Active Internship</div>
                     </div>
                 </div>
             </div>
@@ -198,12 +231,23 @@
                             </div>
                         </div>
                         
-                        <div class="skill-section">
+                        <div class="skill-section mb-3">
                             <h3 class="h6 mb-2">Network Automation</h3>
                             <div class="d-flex flex-wrap gap-2">
-                                <span class="badge badge-skill">Network Scripts</span>
-                                <span class="badge badge-skill">Monitoring Tools</span>
-                                <span class="badge badge-skill">Configuration Management</span>
+                                <span class="badge badge-skill">Python</span>
+                                <span class="badge badge-skill">Ansible</span>
+                                <span class="badge badge-skill">Netmiko</span>
+                                <span class="badge badge-skill">Bash Scripting</span>
+                            </div>
+                        </div>
+
+                        <div class="skill-section">
+                            <h3 class="h6 mb-2">AI Tools</h3>
+                            <div class="d-flex flex-wrap gap-2">
+                                <span class="badge badge-skill">Claude</span>
+                                <span class="badge badge-skill">ChatGPT</span>
+                                <span class="badge badge-skill">GitHub Copilot</span>
+                                <span class="badge badge-skill">AI-assisted Scripting</span>
                             </div>
                         </div>
                     </div>
@@ -224,7 +268,15 @@
                                 <ul class="list-unstyled">
                                     <li>
                                         <i class="bi bi-check2"></i>
-                                        <span>Starting as an IT Intern</span>
+                                        <span>Developing AI-assisted workflows to improve team productivity and day-to-day IT operations</span>
+                                    </li>
+                                    <li>
+                                        <i class="bi bi-check2"></i>
+                                        <span>Building professional soft skills in a large enterprise environment, including communication, collaboration, and stakeholder engagement</span>
+                                    </li>
+                                    <li>
+                                        <i class="bi bi-check2"></i>
+                                        <span>Gaining hands-on exposure to enterprise IT infrastructure and internal systems at scale</span>
                                     </li>
                                 </ul>
                             </div>
@@ -264,6 +316,24 @@
                                     </li>
                                 </ul>
                             </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card mb-4">
+            <div class="card-body p-0">
+                <div class="terminal-window" aria-label="Terminal demo">
+                    <div class="terminal-titlebar" aria-hidden="true">
+                        <span class="terminal-btn terminal-btn-close"></span>
+                        <span class="terminal-btn terminal-btn-min"></span>
+                        <span class="terminal-btn terminal-btn-max"></span>
+                        <span class="terminal-title">adam@network-lab: ~</span>
+                    </div>
+                    <div class="terminal-body" id="terminal-output" aria-label="Terminal output">
+                        <div class="terminal-line cursor-line">
+                            <span class="t-prompt">adam@network-lab:~$ </span><span class="terminal-cursor" aria-hidden="true"></span>
                         </div>
                     </div>
                 </div>

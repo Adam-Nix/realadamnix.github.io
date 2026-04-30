@@ -161,6 +161,55 @@
                     <i class="bi bi-hdd-network me-2"></i>
                     Home Lab & Services
                 </h2>
+                <figure class="net-diagram mb-4" aria-label="Home lab network topology: TP-Link Router connects to TrueNAS, Jellyfin, AdGuard and Twingate">
+                    <div class="net-node">
+                        <div class="net-icon-box">🌐</div>
+                        <div class="net-name">Internet</div>
+                        <div class="net-tag">ISP</div>
+                    </div>
+                    <div class="net-wire-v"></div>
+                    <div class="net-node">
+                        <div class="net-icon-box"><i class="bi bi-router" aria-hidden="true"></i></div>
+                        <div class="net-name">TP-Link Router</div>
+                        <div class="net-tag">DHCP · WPA3</div>
+                    </div>
+                    <div class="net-wire-v"></div>
+                    <div class="net-bus">
+                        <div class="net-bus-item">
+                            <div class="net-wire-v"></div>
+                            <div class="net-node">
+                                <div class="net-icon-box"><i class="bi bi-hdd-stack" aria-hidden="true"></i></div>
+                                <div class="net-name">TrueNAS</div>
+                                <div class="net-tag">Storage</div>
+                            </div>
+                        </div>
+                        <div class="net-bus-item">
+                            <div class="net-wire-v"></div>
+                            <div class="net-node">
+                                <div class="net-icon-box"><i class="bi bi-play-btn" aria-hidden="true"></i></div>
+                                <div class="net-name">Jellyfin</div>
+                                <div class="net-tag">Media</div>
+                            </div>
+                        </div>
+                        <div class="net-bus-item">
+                            <div class="net-wire-v"></div>
+                            <div class="net-node">
+                                <div class="net-icon-box"><i class="bi bi-shield-check" aria-hidden="true"></i></div>
+                                <div class="net-name">AdGuard</div>
+                                <div class="net-tag">DNS · DoH</div>
+                            </div>
+                        </div>
+                        <div class="net-bus-item">
+                            <div class="net-wire-v"></div>
+                            <div class="net-node">
+                                <div class="net-icon-box"><i class="bi bi-shield-lock" aria-hidden="true"></i></div>
+                                <div class="net-name">Twingate</div>
+                                <div class="net-tag">Zero Trust</div>
+                            </div>
+                        </div>
+                    </div>
+                </figure>
+
                 <div class="row g-4">
                     <div class="col-md-6">
                         <div class="project-card mb-4">
