@@ -1,23 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://adamnix.ie/</loc>
+    <loc>https://adamnix.com/</loc>
     <priority>1.00</priority>
   </url>
   <url>
-    <loc>https://adamnix.ie/projects.html</loc>
+    <loc>https://adamnix.com/projects.html</loc>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://adamnix.ie/contact.html</loc>
+    <loc>https://adamnix.com/contact.html</loc>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://adamnix.ie/cv.html</loc>
+    <loc>https://adamnix.com/cv.html</loc>
     <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://adamnix.ie/thankyou.html</loc>
-    <priority>0.40</priority>
   </url>
 </urlset>

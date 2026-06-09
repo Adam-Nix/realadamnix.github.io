@@ -1,13 +1,5 @@
-(function() {
-    // Check system preference immediately
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    const savedPreference = localStorage.getItem('darkModePreference');
-    
-    // Set initial theme based on saved preference or system preference
-    if (savedPreference === 'dark' || (savedPreference === null && prefersDark)) {
-        document.body.classList.add('dark-mode');
-    }
-})();
+// Initial theme is applied by a small inline script in each page's <body> so it
+// takes effect before first paint (no flash of light mode before this file loads).
 
 document.addEventListener('DOMContentLoaded', () => {
     // Dark Mode Elements
@@ -105,8 +97,8 @@ function initTerminal() {
     if (!output) return;
 
     const script = [
-        { cmd: 'ping adamnix.ie -c 3' },
-        { out: 'PING adamnix.ie (185.199.108.153): 56 data bytes', d: 300 },
+        { cmd: 'ping adamnix.com -c 3' },
+        { out: 'PING adamnix.com (185.199.108.153): 56 data bytes', d: 300 },
         { out: '64 bytes from 185.199.108.153: icmp_seq=1 ttl=54 time=12.4 ms', d: 700, cls: 't-success' },
         { out: '64 bytes from 185.199.108.153: icmp_seq=2 ttl=54 time=11.8 ms', d: 700, cls: 't-success' },
         { out: '64 bytes from 185.199.108.153: icmp_seq=3 ttl=54 time=12.1 ms', d: 700, cls: 't-success' },
@@ -179,8 +171,8 @@ function initTerminal() {
     if (!termCard) { run(); return; }
     const obs = new IntersectionObserver(entries => {
         if (entries[0].isIntersecting) { obs.disconnect(); run(); }
-    }, { threshold: 0.25 });
-    obs.observe(termCard);
+    }, { threshold: 0.1 });
+    requestAnimationFrame(() => obs.observe(termCard));
 }
 
 function initStatCounters() {
@@ -205,9 +197,9 @@ function initStatCounters() {
         entries.forEach(entry => {
             if (entry.isIntersecting) { animate(entry.target); obs.unobserve(entry.target); }
         });
-    }, { threshold: 0.5 });
+    }, { threshold: 0.1 });
 
-    counters.forEach(c => obs.observe(c));
+    requestAnimationFrame(() => counters.forEach(c => obs.observe(c)));
 }
 
 function redirectToThankYou(event) {

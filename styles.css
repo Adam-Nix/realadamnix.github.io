@@ -4,6 +4,11 @@ html {
     scroll-behavior: smooth;
 }
 
+/* Keep anchor targets clear of the sticky navbar */
+[id] {
+    scroll-margin-top: 6.5rem;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -236,6 +241,13 @@ body.dark-mode .form-control:focus {
 
 body.dark-mode .form-label {
     color: var(--text-color);
+}
+
+/* Bootstrap's .text-muted and the CV page's .meta dates use dark grays
+   meant for light backgrounds — lighten them so dates stay readable */
+body.dark-mode .text-muted,
+body.dark-mode .meta {
+    color: rgba(243, 244, 246, 0.65) !important;
 }
 
 body.dark-mode .btn-outline-primary {
@@ -718,16 +730,22 @@ body.dark-mode .contact-item:hover {
     position: fixed;
     bottom: 1.5rem;
     right: 1.5rem;
-    display: none;
+    display: flex;
     align-items: center;
     justify-content: center;
     padding: 0.75rem 1rem;
     border-radius: 50%;
     z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: opacity 0.25s ease, visibility 0.25s ease, transform 0.25s ease;
 }
 
 .back-to-top.show {
-    display: flex;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
 }
 
 /* Utility: ensure images don't exceed container */
