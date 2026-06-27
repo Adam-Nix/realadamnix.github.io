@@ -305,26 +305,29 @@ body.dark-mode .badge.bg-secondary-subtle { background-color: rgba(255,255,255,0
 #skills .h6.text-uppercase { color: #1f2937; letter-spacing: .5px; }
 body.dark-mode #skills .h6.text-uppercase { color: #ffffff; }
 
-/* Enhanced badge animations */
+/* Skill badges: sized and contrasted for legibility */
 .badge-skill {
-    background: rgba(42,93,176,0.08) !important; 
-    color: #234a8a !important; 
-    border: 1px solid rgba(42,93,176,0.35) !important;
-    font-weight: 500;
+    background: rgba(42,93,176,0.12) !important;
+    color: #1d3c75 !important;
+    border: 1px solid rgba(42,93,176,0.45) !important;
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 0.45em 0.85em;
+    letter-spacing: 0.01em;
     transition: all 0.2s ease;
     cursor: default;
 }
 
 .badge-skill:hover {
-    background: rgba(42,93,176,0.12) !important;
-    border-color: rgba(42,93,176,0.5) !important;
+    background: rgba(42,93,176,0.18) !important;
+    border-color: rgba(42,93,176,0.6) !important;
     transform: translateY(-1px);
 }
 
-body.dark-mode .badge-skill { 
-    background: rgba(91,155,213,0.15) !important; 
-    color: #5b9bd5 !important; 
-    border: 1px solid rgba(91,155,213,0.55) !important;
+body.dark-mode .badge-skill {
+    background: rgba(91,155,213,0.2) !important;
+    color: #d4e6fa !important;
+    border: 1px solid rgba(91,155,213,0.6) !important;
 }
 
 body.dark-mode .badge-skill:hover {
