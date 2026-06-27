@@ -138,3 +138,5 @@ target/
 private-key.pem
 *.pem
 *.key
+# Claude Code local worktrees / config
+.claude/
