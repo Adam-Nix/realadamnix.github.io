@@ -7,14 +7,22 @@ document.addEventListener('DOMContentLoaded', () => {
     const yearSpan = document.getElementById('year');
 
     // Dark Mode Functions
+    const toggles = document.querySelectorAll('#dark-mode-toggle');
+
+    const reflectToggleState = isDark => {
+        toggles.forEach(t => t.setAttribute('aria-pressed', String(isDark)));
+    };
+
     const enableDarkMode = () => {
         body.classList.add('dark-mode');
         localStorage.setItem('darkModePreference', 'dark');
+        reflectToggleState(true);
     };
 
     const disableDarkMode = () => {
         body.classList.remove('dark-mode');
         localStorage.setItem('darkModePreference', 'light');
+        reflectToggleState(false);
     };
 
     // Initialize Dark Mode
@@ -32,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     // Event Listeners
-    document.querySelectorAll('#dark-mode-toggle').forEach(toggle => {
+    toggles.forEach(toggle => {
         toggle.addEventListener('click', () => {
             body.classList.contains('dark-mode') ? disableDarkMode() : enableDarkMode();
         });
@@ -55,27 +63,6 @@ document.addEventListener('DOMContentLoaded', () => {
         yearSpan.textContent = new Date().getFullYear();
     }
 
-    // Card scroll reveal
-    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-        const revealObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.remove('card-hidden');
-                    entry.target.classList.add('card-visible');
-                    revealObserver.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
-
-        document.querySelectorAll('.card').forEach(card => {
-            const rect = card.getBoundingClientRect();
-            if (rect.top >= window.innerHeight) {
-                card.classList.add('card-hidden', 'card-animate');
-                revealObserver.observe(card);
-            }
-        });
-    }
-
     const backToTop = document.getElementById('back-to-top');
     if (backToTop) {
         window.addEventListener('scroll', () => {
@@ -91,6 +78,9 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+const prefersReducedMotion = () =>
+    window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 function initTerminal() {
     const output = document.getElementById('terminal-output');
@@ -117,7 +107,8 @@ function initTerminal() {
         { done: true },
     ];
 
-    const sleep = ms => new Promise(r => setTimeout(r, ms));
+    const reduceMotion = prefersReducedMotion();
+    const sleep = ms => reduceMotion ? Promise.resolve() : new Promise(r => setTimeout(r, ms));
 
     async function typeCmd(text) {
         output.querySelector('.cursor-line')?.remove();
@@ -129,6 +120,10 @@ function initTerminal() {
         const typed = document.createElement('span');
         div.append(prompt, typed);
         output.appendChild(div);
+        if (reduceMotion) {
+            typed.textContent = text;
+            return;
+        }
         for (const ch of text) {
             typed.textContent += ch;
             await sleep(42 + Math.random() * 32);
@@ -182,6 +177,10 @@ function initStatCounters() {
     const animate = el => {
         const target = Number.parseInt(el.dataset.target, 10);
         const suffix = el.dataset.suffix || '';
+        if (prefersReducedMotion()) {
+            el.textContent = target + suffix;
+            return;
+        }
         const duration = 1400;
         const start = performance.now();
         const tick = now => {
